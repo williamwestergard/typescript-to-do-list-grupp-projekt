@@ -1,24 +1,50 @@
-import './style.css'
-import typescriptLogo from './typescript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.ts'
+//Importerar Todo from Types.ts
+import type { Todo } from "./Types";
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
-  </div>
-`
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+let todos: Todo[] = [];
+
+const input = document.querySelector<HTMLInputElement>("#new-todo")!;
+const addButton = document.querySelector<HTMLButtonElement>("#add-btn")!;
+const list = document.querySelector<HTMLUListElement>("#todo-list")!;
+
+// Ritar ut listan
+function renderTodos() {
+  list.innerHTML = "";
+  todos.forEach((todo) => {
+    const li = document.createElement("li");
+    li.textContent = todo.text;
+    li.style.textDecoration = todo.completed ? "line-through" : "none";
+
+    li.addEventListener("click", () => {
+      todo.completed = !todo.completed;
+      renderTodos();
+    });
+
+    // Delete button
+    const delBtn = document.createElement("button");
+    delBtn.textContent = "x";
+    delBtn.addEventListener("click", () => {
+      todos = todos.filter((t) => t.id !== todo.id);
+      renderTodos();
+    });
+
+    li.appendChild(delBtn);
+    list.appendChild(li);
+  });
+}
+
+// Lägg till nytt task
+addButton.addEventListener("click", () => {
+  if (!input.value.trim()) return;
+
+  const newTodo: Todo = {
+    id: Date.now(),
+    text: input.value,
+    completed: false,
+  };
+
+  todos.push(newTodo);
+  input.value = "";
+  renderTodos();
+});
