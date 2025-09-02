@@ -32,7 +32,7 @@ Interfaces help make your code less ptone to errors and easier to understand. Th
 
    Typescript will give you this error:
 
-   ![type-only import error](src/Screenshot 2025-09-02 102650.png)
+   ![type-only import error](my-todo/src/Screenshot 2025-09-02 102650.png)
 
    Why this happens:
 
@@ -40,7 +40,7 @@ Interfaces help make your code less ptone to errors and easier to understand. Th
 
    Fixed mistake:
 
-   ![fixed import](src/Screenshot 2025-09-02 103216.png)
+   ![fixed import](my-todo/src/Screenshot 2025-09-02 103216.png)
 
 2. Wrong type for a property:
 
