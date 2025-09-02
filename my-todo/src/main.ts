@@ -1,50 +1,55 @@
-//Importerar Todo from Types.ts
-import type { Todo } from "./Types";
+import type { Todo } from "./Types"; // Import the Todo interface using a type-only import
 
-
+// Array to hold the list of todos
 let todos: Todo[] = [];
 
 const input = document.querySelector<HTMLInputElement>("#new-todo")!;
 const addButton = document.querySelector<HTMLButtonElement>("#add-btn")!;
 const list = document.querySelector<HTMLUListElement>("#todo-list")!;
 
-// Ritar ut listan
+// Render the todo list so it appears on screen
 function renderTodos() {
-  list.innerHTML = "";
-  todos.forEach((todo) => {
-    const li = document.createElement("li");
-    li.textContent = todo.text;
+  list.innerHTML = ""; // Clear the current list
+
+  todos.forEach((todo) => { // Loop through each todo
+    const li = document.createElement("li"); // Create a new list item
+    li.textContent = todo.text; // Set the text of the list item
+
+    // Strike-through completed todos
     li.style.textDecoration = todo.completed ? "line-through" : "none";
 
+    // Toggle completion when clicking on the todo
     li.addEventListener("click", () => {
       todo.completed = !todo.completed;
       renderTodos();
     });
 
-    // Delete button
+    // Create delete button
     const delBtn = document.createElement("button");
     delBtn.textContent = "x";
+
+    // Remove todo when clicking delete
     delBtn.addEventListener("click", () => {
       todos = todos.filter((t) => t.id !== todo.id);
       renderTodos();
     });
 
-    li.appendChild(delBtn);
-    list.appendChild(li);
+    li.appendChild(delBtn); // Add delete button to list item
+    list.appendChild(li);   // Add list item to the ul
   });
 }
 
-// Lägg till nytt task
+// Add new todo
 addButton.addEventListener("click", () => {
-  if (!input.value.trim()) return;
+  if (!input.value.trim()) return; // Prevent adding empty todos
 
   const newTodo: Todo = {
-    id: Date.now(),
-    text: input.value,
-    completed: false,
+    id: Date.now(),   // Unique ID using timestamp
+    text: input.value, 
+    completed: false, // New todos start as not completed
   };
 
-  todos.push(newTodo);
-  input.value = "";
-  renderTodos();
+  todos.push(newTodo); // Add new todo to the array
+  input.value = "";    // Clear the input field
+  renderTodos();       // Re-render the list
 });
