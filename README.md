@@ -62,7 +62,7 @@ Interfaces help make your code less ptone to errors and easier to understand. Th
 
    Typescript will throw an error saying:
 
-   ![error message wnen assigning string value to expected nuumber](image.png)
+   ![error message wnen assigning string value to expected nuumber](my-todo/src/image.png)
 
    Why this happens:
 
