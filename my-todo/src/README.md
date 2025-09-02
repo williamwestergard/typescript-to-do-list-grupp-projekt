@@ -105,6 +105,63 @@ Interfaces help make your code less ptone to errors and easier to understand. Th
     --> description?: string;
 
 
+## C. Completed program
+
+    How are interfaces used in practise:
+
+        1. Defining a consistent structire:
+
+            In the porgram, we define a Todo interface:
+
+            export interface Todo {
+                id: number;
+                text: string;
+                completed: boolean;
+            }
+
+            This ensures that every Todo item we create has the same porperties (id, text and completed). If we forget a property, or assign it a wrong value, Typescript will warn us. 
+
+
+        2. Type safetyy when manipulating data:
+
+            Anwehere we use Todo[], Typescript checks that only valid todo objects are added or modified. 
+
+            Example:
+
+                const newTodo: Todo = { id: Date.now(), 
+                text: input.value, 
+                completed: false };
+                todos.push(newTodo);
+
+            If we try to add an object missing *completed* or with *id* as a string, Typescript will give an error. This prevents runtime bugs. 
+
+
+        3. Easier collaboration and readability:
+
+            If someone else works on our code, they immediately know the structure of todos. They can clearly see what porperties exist and what type each of them should be. 
+
+        
+        4. Scalability:
+
+            If we later add more features, for example due dates or priority, we can simply extend the nterface.
+
+            Example:
+
+            interface Todo {
+                id: number;
+                text: string;
+                completed: boolean;
+                priority?: "low" | "medium" | "high"; // Optional
+            }
+
+
+
+# How to run our program
+
+
+
+
+
 
 
 
