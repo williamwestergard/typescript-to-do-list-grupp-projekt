@@ -183,7 +183,7 @@ Allow user ti edit the text if a todo after it's been created.
 
         1. Add an "Edit" button next to each todo in main.ts.
         2. When clicked, replace the text with an input field pre-filled with the current todo text. 
-        3. Save changes back to the todos array when user clicks "Save button".
+        3. Save changes back to the todos array when user clicks "Save button". 
 
 
 
