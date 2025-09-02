@@ -158,6 +158,32 @@ Interfaces help make your code less ptone to errors and easier to understand. Th
 
 # How to run our program
 
+1. Clone the repository:
+
+    Open your terminal and run:
+
+    git clone https://github.com/williamwestergard/typescript-to-do-list-grupp-projekt.git
+    cd typescript-to-do-list-grupp-projekt
+
+2. Install dependencies:
+
+    npm install
+
+3. Start development server:
+
+    npm run dev
+
+
+
+# Exercise
+
+Allow user ti edit the text if a todo after it's been created.
+
+    Clues:
+
+        1. Add an "Edit" button next to each todo in main.ts.
+        2. When clicked, replace the text with an input field pre-filled with the current todo text. 
+        3. Save changes back to the todos array when user clicks "Save button".
 
 
 

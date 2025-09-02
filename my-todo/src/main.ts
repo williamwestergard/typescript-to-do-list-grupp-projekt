@@ -15,6 +15,9 @@ function renderTodos() {
     const li = document.createElement("li"); // Create a new list item
     li.textContent = todo.text; // Set the text of the list item
 
+
+  // Edit button here //
+
     // Strike-through completed todos
     li.style.textDecoration = todo.completed ? "line-through" : "none";
 
