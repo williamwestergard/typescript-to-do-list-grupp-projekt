@@ -30,7 +30,7 @@ Interfaces help make your code less ptone to errors and easier to understand. Th
 
     Typescript will give you this error:
 
-    ![type-only import error](<Screenshot 2025-09-02 102650.png>)
+    'Todo' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
 
 
     Why this happens:
@@ -39,7 +39,7 @@ Interfaces help make your code less ptone to errors and easier to understand. Th
 
     Fixed mistake:
 
-    ![fixed import](<Screenshot 2025-09-02 103216.png>)
+    import type { Todo } from "./Types";
 
 
 2. Wrong type for a property:
@@ -62,7 +62,7 @@ Interfaces help make your code less ptone to errors and easier to understand. Th
 
     Typescript will throw an error saying:
 
-    ![error message wnen assigning string value to expected nuumber](image.png)
+    Type 'string' is not assignable to type 'number'.
 
 
     Why this happens:
