@@ -2,13 +2,11 @@
 
 ## Intro
 
-I vårt första möte bestämde vi oss för att göra en to-do lista i Typescript.  
-Vi diskuterade vilka funktioner som var viktigast att implementera.
+I vårt första möte bestämde vi oss för att göra en to-do lista i Typescript.
 
-Sedan skapade vi en github sida för vårt nya projekt.
+Vi diskuterade vilka funktioner som var viktigast att implementera. Sedan skapade vi en github sida för vårt nya projekt.
 En person i gruppen skärmdelade en första version av koden, medan gruppen inflikade om hur vi skulle expandera på den.
-På så sätt fick vi en gemensam startpunkt att jobba efter.
-Sedan jobbade vi indivuellt tills vi hade ett möte där vi mergade ihop vår kod.
+På så sätt fick vi en gemensam startpunkt att jobba efter. Sedan jobbade vi indivuellt tills vi hade ett möte där vi mergade ihop vår kod.
 
 Resultatet blev en fungerande to-do lista som vi var nöjda med.
 
@@ -25,7 +23,8 @@ Feedbacken vi fick från grupp 2 var väldigt konstruktiv och framhävde både p
 Dem gillade att koden och demonstrationen var enkelt att förstå, med ett tydligt interface.
 Svagheten var att projektet var fokuserad på DOM-manipulation, och TypeScript-konceptet (interface) fick mindre fokus.
 
-Vi diskuterade feedbacken inom gruppen, men insåg att vi inte visste hur vi skulle implementera mer TypeScript i projektet.
+Vi diskuterade feedbacken inom gruppen, men insåg att vi inte visste hur vi skulle implementera mer TypeScript i projektet på den tid vi hade kvar.
+Vi behövde istället fokusera på den individuella uppgiften.
 
 ### Vad ni lärt er genom att granska andras tutorials och exempelkod?
 
