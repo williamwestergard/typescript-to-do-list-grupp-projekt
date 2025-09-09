@@ -24,7 +24,7 @@ Dem gillade att koden och demonstrationen var enkelt att förstå, med ett tydli
 Svagheten var att projektet var fokuserad på DOM-manipulation, och TypeScript-konceptet (interface) fick mindre fokus.
 
 Vi diskuterade feedbacken inom gruppen, men insåg att vi inte visste hur vi skulle implementera mer TypeScript i projektet på den tid vi hade kvar.
-Vi behövde istället fokusera på den individuella uppgiften.
+Vi behövde istället fokusera på den resterande tiden på den individuella uppgiften.
 
 ### Vad ni lärt er genom att granska andras tutorials och exempelkod?
 
